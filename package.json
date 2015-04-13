@@ -17,7 +17,15 @@
     "mocha": "^2.2.4"
   },
   "homepage": "https://github.com/ORGANIZATION/keyarray-get.js",
-  "keywords": [],
+  "keywords": [
+    "arrays",
+    "deep",
+    "keys",
+    "nested",
+    "objects",
+    "predicate",
+    "recursive"
+  ],
   "license": "Apache-2.0",
   "main": "source/keyarray-get.js",
   "repository": {
