@@ -19,7 +19,7 @@
   "homepage": "https://github.com/ORGANIZATION/keyarray-get.js",
   "keywords": [],
   "license": "Apache-2.0",
-  "main": "source/index.js",
+  "main": "source/keyarray-get.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ORGANIZATION/keyarray-get.js.git"
