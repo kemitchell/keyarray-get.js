@@ -1,7 +1,7 @@
 {
   "name": "keyarray-get",
   "description": "get nested properties with key arrays",
-  "version": "0.0.0-prerelease",
+  "version": "0.1.0",
   "author": {
     "name": "Kyle E. Mitchell",
     "email": "kyle@kemitchell.com",
@@ -33,7 +33,7 @@
     "url": "https://github.com/kemitchell/keyarray-get.js.git"
   },
   "scripts": {
-    "check": "check-versions",
+    "check": "check-versions --check-module",
     "coverage": "istanbul cover _mocha && istanbul check-coverage coverage/coverage.json",
     "lint": "jshint source test && jscs source test",
     "pre-commit": "npm run check && npm run lint && npm run coverage",
