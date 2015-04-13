@@ -9,12 +9,10 @@
   },
   "bugs": "https://github.com/kemitchell/keyarray-get.js/issues",
   "devDependencies": {
-    "chai": "^2.2.0",
     "check-versions": "^1.0.0",
-    "istanbul": "^0.3.13",
     "jscs": "^1.12.0",
     "jshint": "^2.7.0",
-    "mocha": "^2.2.4"
+    "literate-assertions": "^0.1.0"
   },
   "homepage": "https://github.com/kemitchell/keyarray-get.js",
   "keywords": [
@@ -34,10 +32,9 @@
   },
   "scripts": {
     "check": "check-versions --check-module",
-    "coverage": "istanbul cover _mocha && istanbul check-coverage coverage/coverage.json",
-    "lint": "jshint source test && jscs source test",
-    "pre-commit": "npm run check && npm run lint && npm run coverage",
-    "test": "mocha",
+    "lint": "jshint source && jscs source",
+    "pre-commit": "npm run check && npm run lint && npm run test",
+    "test": "literate-assertions < README.md | sed 's!keyarray-get!./!g' | node",
     "travis-ci": "npm run pre-commit"
   }
 }

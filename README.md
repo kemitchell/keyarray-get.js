@@ -9,28 +9,24 @@ Get nested properties with key arrays.
 ```javascript
 var get = require('keyarray-get');
 
-var object = {
-  a: {
-    b: 'value',
-    c: ['first', 'second']
-  }
-};
+get({a: 'value'}, ['a']);
+// === 'value'
 
-get(object, ['a', 'b']);
-// 'value'
+get({a: {b: 'value'}}, ['a', 'b']);
+// === 'value'
 
-get(object, ['x']);
-// undefined
+get({a: {b: ['value']}}, ['a', 'b', 0]);
+// === 'value'
 
-get(object, ['x'], 'surrogate');
-// 'surrogate'
+get({}, null);
+// throws TypeError
 
-get(object, ['x'], TypeError);
-// throws new TypeError
+get(null, [0]);
+// throws TypeError
 
-get(object, ['a', 'c', 1]);
-// 'second'
+get({}, ['a']);
+// === undefined
 
-get(object, ['a', 'c', 2]);
-// undefined
+get({}, ['a'], 'surrogate');
+// === 'surrogate'
 ```
