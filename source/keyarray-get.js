@@ -6,12 +6,7 @@ module.exports = function get(object, keyArray, surrogate) {
     if (object.hasOwnProperty(firstKey)) {
       return get(object[firstKey], keyArray.slice(1), surrogate);
     } else {
-      if (typeof surrogate === 'function') {
-        var ErrorPrototype = surrogate;
-        throw new ErrorPrototype();
-      } else {
-        return surrogate;
-      }
+      return surrogate;
     }
   }
 };

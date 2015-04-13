@@ -53,14 +53,5 @@ describe('keyarray-get', function() {
         get({}, ['a'], 'surrogate')
       ).to.equal('surrogate');
     });
-
-    it('throws an error of a given type', function() {
-      var ErrorType = function() {};
-      expect(
-        function() {
-          get({}, ['a'], ErrorType);
-        }
-      ).to.throw(ErrorType);
-    });
   });
 });
