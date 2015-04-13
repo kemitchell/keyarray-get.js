@@ -1,0 +1,12 @@
+*.tgz
+.editorconfig
+.gitattributes
+.gitignore
+.istanbul.yml
+.jscsrc
+.jshintignore
+.jshintrc
+.npmignore
+.travis.yml
+coverage/
+test/
