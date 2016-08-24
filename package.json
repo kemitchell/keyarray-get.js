@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com)",
   "devDependencies": {
-    "literate-assertions": "^0.1.0",
+    "defence-cli": "^2.0.0",
+    "replace-require-self": "^1.1.1",
     "standard": "^8.0.0"
   },
   "homepage": "https://github.com/kemitchell/keyarray-get.js",
@@ -18,9 +19,9 @@
     "recursive"
   ],
   "license": "Apache-2.0",
-  "repository":"kemitchell/keyarray-get.js",
+  "repository": "kemitchell/keyarray-get.js",
   "scripts": {
-    "test": "literate-assertions < README.md | sed 's!keyarray-get!./!g' | node",
-    "lint": "standard"
+    "lint": "standard",
+    "test": "defence -i javascript README.md | replace-require-self | node"
   }
 }
