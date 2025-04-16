@@ -18,5 +18,7 @@ assert.throws(function () {
 
 assert(get({}, ['a']) === undefined)
 
+assert(get({}, ['a', 'b']) === undefined)
+
 assert(get({}, ['a'], 'surrogate') === 'surrogate')
 ```
